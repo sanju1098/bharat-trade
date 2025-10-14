@@ -78,7 +78,7 @@ export function StockChart({
   };
 
   return (
-    <Card className={cn("overflow-hidden h-full", className)}>
+    <Card className={cn("overflow-hidden h-fit", className)}>
       <CardHeader className="flex-row items-center justify-between pb-4">
         <div>
           <CardTitle className="leading-none">{symbol}</CardTitle>
@@ -111,12 +111,12 @@ export function StockChart({
                 <linearGradient id="colorPrice" x1="0" y1="0" x2="0" y2="1">
                   <stop
                     offset="5%"
-                    stopColor="hsl(var(--primary))"
+                    stopColor="var(--primary)"
                     stopOpacity={0.3}
                   />
                   <stop
                     offset="95%"
-                    stopColor="hsl(var(--primary))"
+                    stopColor="var(--primary)"
                     stopOpacity={0}
                   />
                 </linearGradient>
@@ -124,7 +124,7 @@ export function StockChart({
               <CartesianGrid
                 strokeDasharray="3 3"
                 vertical={false}
-                stroke="hsl(var(--border))"
+                stroke="var(--primary)"
               />
               <XAxis
                 dataKey="date"
@@ -145,8 +145,8 @@ export function StockChart({
               />
               <Tooltip
                 contentStyle={{
-                  background: "hsl(var(--card))",
-                  border: "1px solid hsl(var(--border))",
+                  background: "var(--card)",
+                  border: "1px solid var(--border)",
                   borderRadius: "var(--radius)",
                   boxShadow: "0 2px 10px rgba(0, 0, 0, 0.1)",
                 }}
@@ -157,7 +157,7 @@ export function StockChart({
               <Area
                 type="monotone"
                 dataKey="price"
-                stroke="hsl(var(--primary))"
+                stroke="var(--primary)"
                 fillOpacity={1}
                 fill="url(#colorPrice)"
                 strokeWidth={2}

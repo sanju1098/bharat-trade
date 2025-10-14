@@ -80,9 +80,7 @@ export function StockCard({
             {priceHistory && priceHistory.length > 0 && (
               <Sparkline
                 data={priceHistory}
-                color={
-                  isPositive ? "rgb(var(--success))" : "rgb(var(--danger))"
-                }
+                color={isPositive ? "var(--success)" : "var(--danger)"}
               />
             )}
           </div>
